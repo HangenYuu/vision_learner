@@ -5,4 +5,4 @@ The structure of the repo is telltale based on the name of the folders: the `PRO
 
 For each architecture, there will be two projects - a Tiny one and a Paper one. The Tiny one is a basic recreation of the signature of the model. The Paper one is the implementation of a SOTA model, may or may not be for the original task.
 
-Each project will have the Notebook file and HTML file rendered by Quarto.
+Each project will have the Notebook file, HTML file (rendered by Quarto if possible), and PDF file.
