@@ -28,7 +28,7 @@ def train_step(model: torch.nn.Module,
                criterion: torch.nn.Module,
                optimizer: torch.optim.Optimizer,
                metric: Accuracy,
-               device: torch.device = device):
+               device):
     train_loss, train_acc = 0, 0
     for batch, (X,y) in enumerate(data_loader):
         X, y = X.to(device), y.to(device)
@@ -57,7 +57,7 @@ def test_step(model: torch.nn.Module,
                data_loader: torch.utils.data.DataLoader,
                criterion: torch.nn.Module,
                metric: Accuracy,
-               device: torch.device = device):
+               device):
     test_loss, acc = 0, 0
     model.eval()
     with torch.inference_mode():
