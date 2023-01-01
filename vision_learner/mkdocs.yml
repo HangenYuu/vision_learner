@@ -1,0 +1,20 @@
+site_name: Vision Learner
+site_description: Learning projects in Computer Vision
+
+repo_url: https://github.com/HangenYuu/vision-learner
+repo_name: HangenYuu/vision-learner
+
+theme:
+  name: readthedocs
+  highlightjs: true
+  palette:
+    primary: black
+
+plugins:
+ - mkdocs-jupyter:
+    include_source: True
+ - search
+
+nav:
+  - Home: 'index.md'
+  - About: 'about.md'
