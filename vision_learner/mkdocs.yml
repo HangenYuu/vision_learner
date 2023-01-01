@@ -1,8 +1,8 @@
 site_name: Vision Learner
 site_description: Learning projects in Computer Vision
 
-repo_url: https://github.com/HangenYuu/vision-learner
-repo_name: HangenYuu/vision-learner
+repo_url: https://github.com/HangenYuu/vision_learner
+repo_name: HangenYuu/vision_learner
 
 theme:
   name: readthedocs
