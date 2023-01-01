@@ -5,7 +5,7 @@ repo_url: https://github.com/HangenYuu/vision_learner
 repo_name: HangenYuu/vision_learner
 
 theme:
-  name: readthedocs
+  name: mkdocs
   highlightjs: true
   palette:
     primary: black
