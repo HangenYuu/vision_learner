@@ -10,6 +10,7 @@ This is the page I used to publish the results for my learning projects in compu
         ...       # Other markdown pages, images and other files.
 
 ## Milestones (subject to changes)
+
 [ ] Finish TinyVGG
 [ ] Finish PaperCNN
 [ ] Finish TinyGAN
