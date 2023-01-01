@@ -11,7 +11,7 @@ This is the page I used to publish the results for my learning projects in compu
 
 ## Milestones (subject to changes)
 
-- [ ] Finish TinyVGG
+- [x] Finish TinyVGG
 - [ ] Finish PaperCNN
 - [ ] Finish TinyGAN
 - [ ] Finish PaperGAN
