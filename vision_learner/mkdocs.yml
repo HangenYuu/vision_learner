@@ -18,3 +18,4 @@ plugins:
 nav:
   - Home: 'index.md'
   - About: 'about.md'
+  - 00. Pytorch Routine: '00_pytorch_routine.ipynb'
