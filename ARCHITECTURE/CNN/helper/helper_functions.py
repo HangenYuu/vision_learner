@@ -10,6 +10,7 @@ from path import Path
 import kaggle
 import os
 import zipfile
+import gc
 
 def imshow(image, ax=None, title=None):
     """Imshow for Tensor."""
