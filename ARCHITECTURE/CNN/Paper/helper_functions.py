@@ -214,6 +214,9 @@ def train(model: torch.nn.Module,
           metric: Accuracy,
           device: torch.device,
           epochs: int = 5):
+    """
+    Courtesy of Daniel Bourke
+    """
     
     # 2. Create empty results dictionary
     results = {"train_loss": [],
@@ -259,7 +262,10 @@ def train(model: torch.nn.Module,
     return results
 
 def plot_loss_curves(results):
-    """Plots training curves of a results dictionary.
+    """
+    Courtesy of Daniel Bourke
+
+    Plots training curves of a results dictionary.
 
     Args:
         results (dict): dictionary containing list of values, e.g.
