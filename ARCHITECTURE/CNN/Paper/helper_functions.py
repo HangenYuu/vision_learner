@@ -82,10 +82,10 @@ def get_food101_dataset_kaggle(batch_size=32, download=True):
         path = Path('kmader/food41')
         if not path.exists():
             kaggle.api.dataset_download_cli(str(path))
-        data_path = Path('food41')
+        data_path = Path('data')
         if not data_path.exists():
             os.mkdir(data_path)
-        zipfile.ZipFile(f'{data_path}.zip').extractall(data_path)
+        zipfile.ZipFile('food41.zip').extractall(data_path)
         with open('/content/food41/meta/meta/train.json', 'r') as fp:
             train_dict = json.load(fp)
         with open('/content/food41/meta/meta/test.json', 'r') as fp:
