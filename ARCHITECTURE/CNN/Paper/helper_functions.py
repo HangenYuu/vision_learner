@@ -145,8 +145,8 @@ def get_food101_dataset_torch(batch_size=32, download=True):
     train_transforms, valid_n_test_transforms = _data_transforms()
     train_dataset = datasets.Food101(data_dir, transform=None, download=download)
     test_dataset = datasets.Food101(data_dir, split='test', transform=valid_n_test_transforms, download=download)
-    lengths = [int(len(train_dataset)*0.75), int(len(train_dataset)*0.25)]
-    train_subset, valid_subset = torch.utils.data.dataset.random_split(train_dataset, lengths)
+    lengths = [0.75, 0.25]
+    train_subset, valid_subset = torch.utils.data.random_split(train_dataset, lengths)
     train_dataset = MyDataset(train_subset, transform=train_transforms)
     valid_dataset = MyDataset(valid_subset, transform=valid_n_test_transforms)
     class_names = test_dataset.classes
@@ -208,7 +208,7 @@ def test_step(model: torch.nn.Module,
 
 # 1. Take in various parameters required for training and test steps
 def train(model: torch.nn.Module,
-          data_loader: torch.utils.data.DataLoader,
+          data_loaders: torch.utils.data.DataLoader,
           criterion: torch.nn.Module,
           optimizer: torch.optim.Optimizer,
           metric: Accuracy,
@@ -225,7 +225,7 @@ def train(model: torch.nn.Module,
     # 3. Loop through training and testing steps for a number of epochs
     for epoch in tqdm(range(epochs)):
         train_loss, train_acc = train_step(model,
-                                           data_loader,
+                                           data_loaders[0],
                                            criterion,
                                            optimizer,
                                            metric,
@@ -234,7 +234,7 @@ def train(model: torch.nn.Module,
         torch.cuda.empty_cache()
 
         test_loss, test_acc = test_step(model,
-                                        data_loader,
+                                        data_loaders[1],
                                         criterion,
                                         metric,
                                         device)

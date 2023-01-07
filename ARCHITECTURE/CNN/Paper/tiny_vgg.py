@@ -19,7 +19,7 @@ class TinyConvNet(nn.Module):
         )
         self.classifier = nn.Sequential(
             nn.Flatten(),
-            nn.Linear(hidden_units*7*7, output_shape)
+            nn.Linear(hidden_units*56*56, output_shape)
         )
 
     def forward(self, x):
