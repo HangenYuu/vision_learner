@@ -138,7 +138,7 @@ def get_food101_dataset_kaggle(batch_size=32, download=True):
     train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
     valid_loader = torch.utils.data.DataLoader(valid_dataset, batch_size=batch_size)
     test_loader = torch.utils.data.DataLoader(test_dataset, batch_size=batch_size)
-    return train_loader, valid_loader, test_loader, class_names
+    return train_loader, valid_loader, test_loader, test_dataset, class_names
 
 def get_food101_dataset_torch(batch_size=32, download=True):
     data_dir = Path('data')
@@ -153,7 +153,7 @@ def get_food101_dataset_torch(batch_size=32, download=True):
     train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
     valid_loader = torch.utils.data.DataLoader(valid_dataset, batch_size=batch_size)
     test_loader = torch.utils.data.DataLoader(test_dataset, batch_size=batch_size)
-    return train_loader, valid_loader, test_loader, class_names
+    return train_loader, valid_loader, test_loader, test_dataset, class_names
 
 def train_step(model: torch.nn.Module,
                data_loader: torch.utils.data.DataLoader,
