@@ -48,11 +48,7 @@ def ResNet18(num_classes, device):
     for param in model.parameters():
         param.requires_grad = False
     
-    model.fc = nn.Sequential(nn.Linear(512, 256),
-                         nn.ReLU(),
-                         nn.Dropout(p=0.4),
-                         nn.Linear(256, num_classes),
-                         nn.LogSoftmax(dim=1))
+    model.fc = nn.Linear(512, num_classes)
     model = model.to(device)
 
     return model

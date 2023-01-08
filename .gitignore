@@ -2,3 +2,4 @@ DATA/
 vision_learner/ARCHITECTURE/CNN/Paper/data/
 data/
 vision_learner/ARCHITECTURE/CNN/Paper/DATA/
+vision_learner/ARCHITECTURE/CNN/Paper/checkpoint.pth
